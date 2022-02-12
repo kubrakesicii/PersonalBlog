@@ -1,4 +1,5 @@
-﻿using DataAccess.Context;
+﻿using DataAccess.Abstract;
+using DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericDal<TEntity> where TEntity : class
     {
 
         public async Task Delete(TEntity entity)

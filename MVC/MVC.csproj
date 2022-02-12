@@ -5,7 +5,45 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\BlogTheme\.git\config" />
+    <None Include="wwwroot\BlogTheme\.git\description" />
+    <None Include="wwwroot\BlogTheme\.git\FETCH_HEAD" />
+    <None Include="wwwroot\BlogTheme\.git\HEAD" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\applypatch-msg.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\commit-msg.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\post-update.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\pre-applypatch.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\pre-commit.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\pre-merge-commit.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\pre-push.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\pre-rebase.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\pre-receive.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="wwwroot\BlogTheme\.git\hooks\update.sample" />
+    <None Include="wwwroot\BlogTheme\.git\index" />
+    <None Include="wwwroot\BlogTheme\.git\info\exclude" />
+    <None Include="wwwroot\BlogTheme\.git\logs\HEAD" />
+    <None Include="wwwroot\BlogTheme\.git\logs\refs\heads\master" />
+    <None Include="wwwroot\BlogTheme\.git\logs\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\BlogTheme\.git\objects\pack\pack-92dd0fa70a47d3bd186ce20452e100e1ddb44c5b.idx" />
+    <None Include="wwwroot\BlogTheme\.git\objects\pack\pack-92dd0fa70a47d3bd186ce20452e100e1ddb44c5b.pack" />
+    <None Include="wwwroot\BlogTheme\.git\packed-refs" />
+    <None Include="wwwroot\BlogTheme\.git\refs\heads\master" />
+    <None Include="wwwroot\BlogTheme\.git\refs\remotes\origin\HEAD" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\BlogTheme\.git\objects\info\" />
+    <Folder Include="wwwroot\BlogTheme\.git\refs\tags\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
 </Project>

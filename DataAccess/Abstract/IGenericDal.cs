@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Repositories
+namespace DataAccess.Abstract
 {
-    public interface IGenericRepository<TEntity> where TEntity : class
+    public interface IGenericDal<TEntity> where TEntity : class
     {
         Task Insert(TEntity entity);
         Task Delete(TEntity entity);
