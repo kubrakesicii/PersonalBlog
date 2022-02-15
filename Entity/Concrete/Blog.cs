@@ -17,7 +17,5 @@ namespace Entity.Concrete
         public int ViewCount { get; set; }
         public int IsActive { get; set; }
 
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }
     }
 }

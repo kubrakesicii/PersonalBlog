@@ -139,7 +139,7 @@ var PageTransitions = (function ($) {
     // All pt-trigger click event calls this function
     // This function gets the animation id, goto page that we define in `data-animation` and 'data-goto' repectively.
     function Animate($pageTrigger) {
-
+        console.log($pageTrigger);
         // Checking for 'data-animation' and 'data-goto' attributes.
         if (!($pageTrigger.attr('data-animation'))) {
             alert("Invalid attribute configuration. \n\n 'data-animation' attribute not found");

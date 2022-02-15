@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concrete
+namespace Business.Abstract
 {
-    public class BlogDal
+    public interface IExperienceService
     {
     }
 }

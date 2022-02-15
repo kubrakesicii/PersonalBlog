@@ -21,7 +21,7 @@ namespace DataAccess.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Connection string");
+            optionsBuilder.UseSqlServer("server=127.0.0.1:3306;database=MyBlogDb; integrated security=true");
         }
     }
 }

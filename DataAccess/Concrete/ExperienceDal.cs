@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    public class BlogDal
+    public class ExperienceDal
     {
     }
 }
