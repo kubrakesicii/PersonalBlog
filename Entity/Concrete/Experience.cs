@@ -12,6 +12,7 @@ namespace Entity.Concrete
         public string TimeInterval { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public string CompanyName { get; set; }
         public int IsActive { get; set; }
     }
 }

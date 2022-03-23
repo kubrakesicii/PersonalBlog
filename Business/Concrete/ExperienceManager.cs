@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
+using Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,11 @@ namespace Business.Concrete
         public ExperienceManager(IExperienceDal experienceDal)
         {
             _experienceDal = experienceDal;
+        }
+
+        public async Task<List<Experience>> GetAllExperiences()
+        {
+            return await _experienceDal.GetAll();
         }
     }
 }

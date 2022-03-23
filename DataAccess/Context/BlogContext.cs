@@ -1,4 +1,5 @@
-﻿using Entity.Concrete;
+﻿using DataAccess.Configurations;
+using Entity.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,17 @@ namespace DataAccess.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=127.0.0.1:3306;database=MyBlogDb; integrated security=true");
+            optionsBuilder.UseSqlServer("server=127.0.0.1,1433;database=MyBlogDb;User Id=sa;Password=Kk190798!;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new BlogConfig());
+            modelBuilder.ApplyConfiguration(new ExperienceConfig());
+            modelBuilder.ApplyConfiguration(new CommentConfig());
+            modelBuilder.ApplyConfiguration(new ProjectConfig());
+            modelBuilder.ApplyConfiguration(new SkillConfig());
+            modelBuilder.ApplyConfiguration(new TagConfig());
         }
     }
 }

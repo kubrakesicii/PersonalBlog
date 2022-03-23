@@ -1,0 +1,18 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using Entity.Concrete
+@model List<Experience>
+
+    @foreach(var item in Model)
+    {
+        <div class="timeline-event te-primary">
+        <h5 class="event-date"> @item.TimeInterval </h5>
+        <h4 class="event-name"> @item.Title </h4>
+        <span class="event-description"> @item.CompanyName </span>
+        <p> @item.Description </p>
+    </div>   
+    }
+ 

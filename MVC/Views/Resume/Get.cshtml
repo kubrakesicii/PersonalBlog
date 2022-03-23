@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Get";
+    Layout = "~/Views/Shared/BlogLayout.cshtml";
+}
+
+@using Entity.Concrete
+@model List<Experience>
+
+@RenderBody
+    <!-- Resume Subpage -->
+    <section class="pt-page pt-page-3" data-id="resume">
+        <div class="section-title-block">
+        <h2 class="section-title">Resume</h2>
+        <h5 class="section-description">6 Years of Experience</h5>
+        </div>
+
+        <div class="row">
+        <div class="col-sm-6 col-md-4 subpage-block">
+            <div class="block-title">
+            <h3>Education</h3>
+            </div>
+            <div class="timeline">
+            <!-- Single event -->
+            <div class="timeline-event te-primary">
+                <h5 class="event-date"> 2012 </h5>
+                <h4 class="event-name">Buca Mehmet Akif Ersoy Anadolu Lisesi</h4>
+                <span class="event-description">University of Studies</span>
+                <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+            </div>
+            <!-- Single event -->
+            <div class="timeline-event te-primary">
+                <h5 class="event-date">2016 - 2017</h5>
+                <h4 class="event-name">Yaşar Üniversitesi</h4>
+                <span class="event-description"> Yabancı Diller MEslek Yüksekokulu</span>
+                <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+            </div>
+            <!-- Single event -->
+            <div class="timeline-event te-primary">
+                <h5 class="event-date">2014-2021</h5>
+                <h4 class="event-name">Yaşar Üniversitesi</h4>
+                <span class="event-description">Yazılım Mühendisliği</span>
+                <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 subpage-block">
+            <div class="block-title">
+            <h3>Experience</h3>
+            </div>
+            <div class="timeline">
+            <!-- Single event / Event dbden cekilecek-->
+                  @await Html.PartialAsync("~/Views/Partial/Experiences.cshtml", Model)                        
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 subpage-block">
+            <div class="block-title">
+            <h3>Coding Skills</h3>
+            </div>
+            <div class="skills-info">
+                <!--List of Skills Render Here-->
+                <h4>Web Design</h4>                               
+            <div class="skill-container">
+                <div class="skill-percentage skill-1"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="download-cv-block">
+            <a class="button" target="_blank" href="#">Download CV</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End Resume Subpage -->
+
+
+
