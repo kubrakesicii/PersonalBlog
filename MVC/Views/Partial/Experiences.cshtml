@@ -4,9 +4,9 @@
 *@
 
 @using Entity.Concrete
-@model List<Experience>
+@model MVC.Models.ResumeViewModel
 
-    @foreach(var item in Model)
+    @foreach(var item in Model.Experiences)
     {
         <div class="timeline-event te-primary">
         <h5 class="event-date"> @item.TimeInterval </h5>

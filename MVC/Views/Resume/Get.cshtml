@@ -5,7 +5,7 @@
 }
 
 @using Entity.Concrete
-@model List<Experience>
+@model MVC.Models.ResumeViewModel
 
 @RenderBody
     <!-- Resume Subpage -->
@@ -59,11 +59,10 @@
             <div class="block-title">
             <h3>Coding Skills</h3>
             </div>
+
             <div class="skills-info">
                 <!--List of Skills Render Here-->
-                <h4>Web Design</h4>                               
-            <div class="skill-container">
-                <div class="skill-percentage skill-1"></div>
+                  @await Html.PartialAsync("~/Views/Partial/Skills.cshtml", Model)                        
             </div>
             </div>
         </div>
