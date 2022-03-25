@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using DataAccess.EntityFramework;
+using Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,16 @@ namespace Business.Concrete
         public BlogManager(IBlogDal blogDal)
         {
             _blogDal = blogDal;
+        }
+
+        public async Task<List<Blog>> GetAllBlogs()
+        {
+            return await _blogDal.GetAll();
+        }
+
+        public async Task<Blog> GetBlog(int id)
+        {
+            return await _blogDal.GetById(id);
         }
     }
 }

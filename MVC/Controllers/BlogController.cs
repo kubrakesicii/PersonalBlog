@@ -1,20 +1,28 @@
 ﻿using Business.Concrete;
 using DataAccess.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace MVC.Controllers
 {
     public class BlogController : Controller
     {
-        BlogManager blogManager = new BlogManager(new EfBlogRepository());
+        BlogManager _blogManager = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult BlogDetail()
+        public async Task<IActionResult> List()
         {
-            return View();
+            var blogs = await _blogManager.GetAllBlogs();
+            return View(blogs);
+        }
+
+        public async Task<IActionResult> Detail(int id)
+        {
+            var blog = await _blogManager.GetBlog(id);
+            return View(blog);
         }
     }
 }

@@ -4,9 +4,13 @@
     Layout = "~/Views/Shared/BlogLayout.cshtml";
 }
 
+@using Entity.Concrete
+@model Blog
+
     <!-- Single Post page -->
        <div class="page-wrapper">
-          <a class="blog-back-button" href="~/BlogTheme/index.html#blog"><i class="fa fa-angle-left"></i></a>
+          <a class="blog-back-button" href="/Blog/List"><i class="fa fa-angle-left"></i></a>
+
 
           <div class="blog-post-main-image">
             <img class="post-image img-responsive" src="~/BlogTheme/images/blog/blog_post_2_full.jpg" alt="blog-post-1" />
