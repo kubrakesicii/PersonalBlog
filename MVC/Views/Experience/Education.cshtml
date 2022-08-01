@@ -1,0 +1,20 @@
+﻿
+@using Entities.DTOs.Experience
+@model List<GetExperienceDto>
+ 
+
+    <div id="mp-accordion-1" data-children=".mp-accordion-item" class="mp-accordion">
+            @foreach(var item in Model)
+        {
+            <!-- ACCORDION ITEM 1 -->
+            <div class="mp-accordion-item">
+                <a class="mp-accordion-title" data-toggle="collapse" data-parent="#mp-accordion-1" href="#mp-accordion-item-1" aria-expanded="false" aria-controls="mp-accordion-item-1">2014 to Present</a>
+                <div id="mp-accordion-item-1" class="collapse show" role="tabpanel">
+                    <div class="mp-accordion-content">
+                        <h5>@item.Name</h5>
+                        @item.Description
+                    </div>
+                </div>
+            </div>
+        }
+    </div>

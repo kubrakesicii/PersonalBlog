@@ -1,0 +1,10 @@
+﻿
+@using Entities.Concrete
+@model List<Skill>
+
+    @foreach(var item in Model)
+{
+    <div class="progress">
+        <div class="progress-bar bg-success" style="width: 100%" role="progressbar" aria-valuenow="@item.Percentage" aria-valuemin="0" aria-valuemax="100"><span>@item.Name</span> @item.Percentage%</div>
+    </div>
+}

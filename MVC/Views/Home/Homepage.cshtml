@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Homepage";
+    Layout = "~/Views/Shared/BlogLayout.cshtml";
+}
+@using Entities.DTOs
+@model MVC.Models.HomepageViewModel
+
+
+    <div class="clearfix"></div>
+    <div class="row">
+        <!-- BLOG POSTS -->
+            <div class="col-12 col-lg-7">
+            @await Html.PartialAsync("~/Views/Blog/LastBlog.cshtml", Model.LastBlogs)
+            </div>
+
+        <!-- SIDEBAR -->
+        <div class="col-12 col-lg-5">
+            <!-- AUTHOR BOX -->
+            @await Html.PartialAsync("~/Views/User/UserCard.cshtml", Model.User)
+
+
+            <!-- CATEGORIES -->
+            <div class="eskimo-categories eskimo-widget">
+                <h5 class="eskimo-title-with-border"><span>Categories</span></h5>
+               
+                @await Html.PartialAsync("~/Views/Category/CategoryList.cshtml", Model.Categories)
+
+            </div>
+            <!-- POPULAR POSTS -->                 
+            @await Html.PartialAsync("~/Views/Blog/PopularBlog.cshtml", Model.PopularBlogs)
+
+
+@*                      <!-- BANNER -->
+            <div class="eskimo-widget">
+                <a href="https://themeforest.net/user/egemenerd/portfolio">	
+                    <img src="~/BlogTemplate/images/600x600.png" alt="banner" class="img-fluid mx-auto d-block" />
+                </a>
+            </div>*@
+
+            <!-- TAGS -->
+            @await Html.PartialAsync("~/Views/Tag/TagList.cshtml", Model.Tags)
+
+
+                        
+        </div>
+    </div>
+

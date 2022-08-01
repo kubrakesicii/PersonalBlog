@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewData["Title"] = "AboutMe";
+    Layout = "~/Views/Shared/BlogLayout.cshtml";
+}
+
+@using Entities.DTOs
+@model MVC.Models.AboutViewModel
+
+        <!-- PAGE TITLE -->
+        @await Html.PartialAsync("~/Views/User/UserAboutme.cshtml", Model.User)
+
+
+        <!-- ABOUT ME -->
+        <div class="row">
+            <div class="col-12 col-lg-7 order-2 order-lg-1">
+
+                        
+                <!--SKILL-->
+               @await Html.PartialAsync("~/Views/Skill/SkillList.cshtml", Model.Skills)
+
+
+
+            </div>
+@*                    <div class="col-12 col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0">
+                <img src="images/600x600.png" alt="Jane Doe" class="img-fluid mx-auto d-block eskimo-img-shadow" />
+            </div>*@
+        </div>
+        <!-- DIVIDER -->
+        <hr />
+        <!-- TABS -->
+        <h2>EDUCATION</h2>
+        <!-- ACCORDION -->
+        @await Html.PartialAsync("~/Views/Experience/Education.cshtml", Model.SchoolExperience)
+
+        <br /><br />
+
+        <h2>Work Exp</h2>
+        <!-- ACCORDION -->
+        @await Html.PartialAsync("~/Views/Experience/WorkExp.cshtml", Model.WorkExperience)
+
+
+        <!-- DIVIDER -->
+        <hr />
+
+
+        <h2>PORTFOLIO</h2>
+        <p>Possumus e aute sed se litteris in aliquip, a tamen quem qui pariatur ex pariatur nam nulla possumus, magna do nostrud non quid qui cernantur eram aliqua e illum labore proident consequat.</p>
+        <!-- IMAGE GALLERY -->
+        <div class="eskimo-masonry-grid eskimo-gallery">
+            <div class="eskimo-three-columns" data-columns>
+                <!-- GALLERY ITEM 1 -->
+                <div class="eskimo-gallery-item">
+                    <a href="#" data-featherlight="images/1400x1000.png" class="eskimo-lightbox">
+                        <img src="images/900x600.png" alt="" />
+                    </a>
+                </div>
+                <!-- GALLERY ITEM 2 -->
+                <div class="eskimo-gallery-item">
+                    <a href="#" data-featherlight="images/1400x1000.png" class="eskimo-lightbox">
+                        <img src="images/900x600.png" alt="" />
+                    </a>
+                </div>
+                <!-- GALLERY ITEM 3 -->
+                <div class="eskimo-gallery-item">
+                    <a href="#" data-featherlight="images/1400x1000.png" class="eskimo-lightbox">
+                        <img src="images/900x600.png" alt="" />
+                    </a>
+                </div>
+                <!-- GALLERY ITEM 4 -->
+                <div class="eskimo-gallery-item">
+                    <a href="#" data-featherlight="images/1400x1000.png" class="eskimo-lightbox">
+                        <img src="images/900x600.png" alt="" />
+                    </a>
+                </div>
+                <!-- GALLERY ITEM 5 -->
+                <div class="eskimo-gallery-item">
+                    <a href="#" data-featherlight="images/1400x1000.png" class="eskimo-lightbox">
+                        <img src="images/900x600.png" alt="" />
+                    </a>
+                </div>
+                <!-- GALLERY ITEM 6 -->
+                <div class="eskimo-gallery-item">
+                    <a href="#" data-featherlight="images/1400x1000.png" class="eskimo-lightbox">
+                        <img src="images/900x600.png" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- DIVIDER -->
+        <hr />
+        <h2>CONTACT ME</h2>
+        <p>Possumus e aute sed se litteris in aliquip, a tamen quem qui pariatur ex pariatur nam nulla possumus, magna do nostrud non quid qui cernantur eram aliqua e illum labore proident consequat.</p>
+        <!-- CONTACT FORM -->
+        <form id="ajax-form" action="mailer.php" method="post">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <p>
+                        <label>Your Name</label><br />
+                        <input type="text" name="sendername" id="sendername" class="form-control" required="required" maxlength="50" />
+                    </p>
+                    <p>
+                        <label>Your Email</label><br />
+                        <input type="email" name="senderemail" id="senderemail" class="form-control" required="required" maxlength="50" />
+                    </p>
+                    <p>
+                        <label>Phone Number</label><br />
+                        <input type="text" name="senderphone" id="senderphone" class="form-control" maxlength="50" />
+                    </p>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p>
+                        <label>Your Message</label><br />
+                        <textarea name="sendermessage" id="sendermessage" required="required" class="form-control form-fixed-height"></textarea>
+                    </p>
+                    <button id="sendbutton" type="submit" class="btn btn-lg w-100">Send Message</button>
+                </div>
+            </div>
+        </form>
+        <div id="form-messages"></div>
+  

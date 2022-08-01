@@ -1,0 +1,52 @@
+﻿@using Entities.DTOs.Blog
+@model List<GetBlogDto>
+
+
+            <h5 class="eskimo-title-with-border"><span>Son Blog Yazıları</span></h5>
+
+        <div class="eskimo-masonry-grid">
+            <div class="eskimo-one-column" data-columns>
+                <!-- POST 1 -->
+
+            @foreach(var item in Model)
+            {
+                <div class="card-masonry">
+                    <div class="card">
+                        <a href="single-post.html">
+                            <img class="card-vertical-img" src=@item.CoverImage alt="Ketchup Flavored Ice Cream!" />   
+                        </a>
+                        <div class="card-border">
+                            <div class="card-body">
+                                <div class="card-category">
+                                    <span><a href="category.html">@item.Category.Name</a></span>
+                                </div>
+                                <h3 class="card-title">
+                                    <a href="single-post.html">@item.Topic</a>
+                                </h3>
+                                <p>@item.Content</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="eskimo-author-meta">
+                                    By <a class="author-meta" href="author.html">Egemenerd</a>
+                                </div>
+                                <div class="eskimo-date-meta">
+                                    <a href="single-post.html">@(((DateTime)@item.Date).ToString("dd-MMM-yyyy"))</a>
+                                </div>
+                                <div class="eskimo-reading-meta">3 min read</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }            
+
+
+                
+
+       
+            </div>
+        </div>
+        <!-- VIEW ALL BUTTON -->
+        <div class="eskimo-view-more mb-5">
+            <a class="btn btn-default" href="blog.html">VIEW ALL</a>
+        </div>
+

@@ -1,0 +1,69 @@
+﻿
+@using Entities.DTOs.Comment
+@model List<GetCommentDto>
+
+
+
+<div id="eskimo-comments-wrapper">
+        <div id="eskimo_comments_block" class="eskimo_comments_block">
+            <h3 class="eskimo-title-with-border">
+                <span>Comments</span>
+            </h3>
+            <div class="eskimo_commentlist">
+                <!-- COMMENT 1 -->
+            @foreach(var item in Model)
+            {
+                      <div class="eskimo_comment_wrapper">
+                    <div class="eskimo_comments">
+                        <div class="eskimo_comment">
+                            <div class="eskimo_comment_inner">
+                                <div class="eskimo_comment_left">
+                                    <img alt='' src='images/100x100.png' />
+                                </div>
+                                <div class="eskimo_comment_right">
+                                    <div class="eskimo_comment_right_inner ">
+                                        <cite class="eskimo_fn">
+                                            <a href='author.html'>@item.UserName</a>
+                                        </cite>
+                                        <div class="eskimo_comment_links">
+                                            <i class="fa fa-clock-o"></i> @(((DateTime)@item.Date).ToString("dd-MMM-yyyy hh:mm")) - <a href="#">Reply</a>
+                                        </div>
+                                        <div class="eskimo_comment_text">
+                                            <p>@item.Text</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- COMMENT 1 REPLY -->
+                   @* <div class="eskimo_comment_wrapper">
+                        <div class="eskimo_comments">
+                            <div class="eskimo_comment">
+                                <div class="eskimo_comment_inner">
+                                    <div class="eskimo_comment_left">
+                                        <img alt='' src='images/100x100.png' />
+                                    </div>
+                                    <div class="eskimo_comment_right">
+                                        <div class="eskimo_comment_right_inner ">
+                                            <cite class="eskimo_fn">
+                                                <a href='author.html'>Egemenerd</a>
+                                            </cite>
+                                            <div class="eskimo_comment_links">
+                                                <i class="fa fa-clock-o"></i> May 23, 2018 at 9:57 pm - <a href="#">Reply</a>
+                                            </div>
+                                            <div class="eskimo_comment_text">
+                                                <p>Incurreret elit ab excepteur praetermissum. In dolor expetendis cernantur a expetendis noster amet e quorum in fugiat cupidatat quo tamen minim sed ex quo quae irure aute. Aut ipsum mentitum, malis fabulas aut esse noster est se lorem praetermissum, quem admodum litteris.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+            }
+
+            </div>
+        </div>
+    </div>

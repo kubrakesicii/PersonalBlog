@@ -1,0 +1,26 @@
+﻿@using Entities.DTOs.Blog
+@model List<GetPopularBlogDto>
+
+ <!-- POPULAR POSTS -->
+    <div class="eskimo-post-list-wrapper eskimo-widget">
+        <h5 class="eskimo-title-with-border"><span>Popular Posts</span></h5>
+
+            @foreach(var item in Model)
+            {
+                <div class="eskimo-post-list">
+                    <div class="eskimo-post-list-left">
+                        <a href="single-post.html">
+                            <img src=@item.CoverImage alt="5 Ways to a Healthy Lifestyle" />   
+                        </a>
+                    </div>
+                    <div class="eskimo-post-list-right">
+                        <p class="eskimo-post-list-title">
+                            <a href="single-post.html">@item.Topic</a>
+                        </p>
+                        <div class="eskimo-post-list-info">
+                            <i class="fa fa-clock-o"></i><a href="single-post.html">@(((DateTime)@item.Date).ToString("dd-MMM-yyyy"))</a>
+                        </div>
+                    </div>
+                </div>    
+            }                          
+    </div>  

@@ -1,0 +1,16 @@
+﻿
+@using Entities.Concrete
+@model List<Tag>
+
+
+<div class="eskimo-widget">
+    <h5 class="eskimo-title-with-border"><span>Etiketler</span></h5>
+    <div class="eskimo-tag-cloud">
+
+                @foreach(var item in Model)
+                {
+                    <a href="category.html">@item.Name</a>
+                }
+    </div>
+</div>  
+
