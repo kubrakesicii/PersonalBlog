@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MmE05zqFPwge1nTmF4clw2lkihHbxuFWua8l/NShEBU=",
+  "Hash": "W5QES4+T1z2umTISa3U33iwxGf7C4DQkuIahLr5d8+k=",
   "Source": "MVC",
   "BasePath": "_content/MVC",
   "Mode": "Default",
@@ -935,6 +935,23 @@
       "OriginalItemSpec": "wwwroot\\BlogTemplate\\images\\900x600.png"
     },
     {
+      "Identity": "C:\\Users\\kubra\\Desktop\\PersonalBlog\\MVC\\wwwroot\\BlogTemplate\\images\\default.png",
+      "SourceId": "MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kubra\\Desktop\\PersonalBlog\\MVC\\wwwroot\\",
+      "BasePath": "_content/MVC",
+      "RelativePath": "BlogTemplate/images/default.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\BlogTemplate\\images\\default.png"
+    },
+    {
       "Identity": "C:\\Users\\kubra\\Desktop\\PersonalBlog\\MVC\\wwwroot\\BlogTemplate\\images\\logo.png",
       "SourceId": "MVC",
       "SourceType": "Discovered",
@@ -950,6 +967,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\BlogTemplate\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\kubra\\Desktop\\PersonalBlog\\MVC\\wwwroot\\BlogTemplate\\images\\profile.png",
+      "SourceId": "MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kubra\\Desktop\\PersonalBlog\\MVC\\wwwroot\\",
+      "BasePath": "_content/MVC",
+      "RelativePath": "BlogTemplate/images/profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\BlogTemplate\\images\\profile.png"
     },
     {
       "Identity": "C:\\Users\\kubra\\Desktop\\PersonalBlog\\MVC\\wwwroot\\BlogTemplate\\index.html",
