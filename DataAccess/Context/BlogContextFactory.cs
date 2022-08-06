@@ -13,7 +13,7 @@ namespace DataAccess.Context
         public BlogContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<BlogContext>();
-            optionsBuilder.UseMySql("Server=localhost;Database=BlogDb;Uid=root;Pwd=123456;",new MySqlServerVersion(new Version("8.0.30")));
+            optionsBuilder.UseMySql("Server=3.137.76.131;Database=BlogDb;Uid=kubra;Pwd=Kk123456.;", new MySqlServerVersion(new Version("8.0.30")));
 
             return new BlogContext(optionsBuilder.Options);
         }

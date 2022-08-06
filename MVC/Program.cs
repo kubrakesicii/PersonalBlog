@@ -16,7 +16,7 @@ builder.Services.AddDbContext<BlogContext>();
 var connectionString = builder.Configuration.GetConnectionString("MysqlConnection");
 builder.Services.AddDbContext<BlogContext>(options =>
 {
-    options.UseMySql("Server=localhost;Database=BlogDb;Uid=root;Pwd=123456;", new MySqlServerVersion(new Version("8.0.30")));
+    options.UseMySql("Server=3.137.76.131;Database=BlogDb;Uid=kubra;Pwd=Kk123456.;", new MySqlServerVersion(new Version("8.0.30")));
 });
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
