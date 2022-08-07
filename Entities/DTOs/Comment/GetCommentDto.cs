@@ -13,5 +13,6 @@ namespace Entities.DTOs.Comment
         public DateTime Date { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
+        public List<GetCommentDto> Replies { get; set; }
     }
 }

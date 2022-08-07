@@ -21,11 +21,21 @@ namespace DataAccess.Concrete
 
         public List<GetCommentDto> GetAllComments(int blogId)
         {
-            return _context.Comments.Where(X => X.BlogId == blogId).Select(x => new GetCommentDto
+            return _context.Comments.Where(x => x.BlogId == blogId && x.ParentId == null).Select(x => new GetCommentDto
             {
                 Id = x.Id,
                 UserName = x.UserName,
-                Title = x.Title,
+                Text = x.Text,
+                Date = x.Date
+            }).ToList();
+        }
+
+        public List<GetCommentDto> GetAllReplies(int commentId)
+        {
+            return _context.Comments.Where(x => x.ParentId == commentId).Select(x => new GetCommentDto
+            {
+                Id = x.Id,
+                UserName = x.UserName,
                 Text = x.Text,
                 Date = x.Date
             }).ToList();

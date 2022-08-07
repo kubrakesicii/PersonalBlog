@@ -1,0 +1,24 @@
+﻿
+@using Entities.DTOs.Blog
+@model GetBlogDetailDto
+
+
+@using (Html.BeginForm("LeaveComment","Comment", FormMethod.Post))
+{
+    <div id="eskimo_comment_form" class="eskimo_comment_form form-group">
+    <h3>Yorum Yapın</h3>
+    <form id="commentform">
+
+        <input type="hidden" id="blogId" name="blogId" value="@Model.Id" />
+
+        <label class="control-label">Ad Soyad</label>
+        @Html.TextBox("username",null, new {@class="form-control", cols="45", rows="1",  placeholder="Ad Soyad"})
+        <br>
+        <label class="control-label">Yorum</label>
+        @Html.TextArea("comment",null, new {@class="form-control", cols="45", rows="8", placeholder="Yorum yap..."})
+
+        <br>
+        <input name="submit" type="submit" id="submit" class="btn btn-default" value="Yorum Gönder" />
+    </form>
+    </div>
+}

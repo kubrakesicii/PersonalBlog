@@ -197,11 +197,7 @@
      <!-- COMMENTS -->
     @await Html.PartialAsync("~/Views/Comment/CommentList.cshtml", Model.Comments)
 
-    
-    <div id="eskimo_comment_form" class="eskimo_comment_form">
-        <h3>Leave a Reply</h3>
-        <form action="single-post.html" method="post" id="commentform">
-            <p><textarea id="comment" name="comment" cols="45" rows="8" required="required"></textarea></p>
-            <input name="submit" type="submit" id="submit" class="btn btn-default" value="Post Comment" />
-        </form>
-    </div>
+    <br /><br />
+
+    <!--Levae Comment-->    
+   @await Html.PartialAsync("~/Views/Comment/LeaveComment.cshtml", Model)

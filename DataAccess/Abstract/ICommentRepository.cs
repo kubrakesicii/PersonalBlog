@@ -12,5 +12,7 @@ namespace DataAccess.Abstract
     public interface ICommentRepository : IGenericRepository<Comment>
     {
         List<GetCommentDto> GetAllComments(int blogId);
+        List<GetCommentDto> GetAllReplies(int commentId);
+
     }
 }

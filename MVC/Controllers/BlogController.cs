@@ -42,6 +42,7 @@ namespace MVC.Controllers
         {
             var blog = _blogService.GetBlogDetail(id).Data;
             blog.Comments = _commentService.GetAllComments(id).Data;
+            blog.Comments.ForEach(c => c.Replies = _commentService.GetAllReplies(c.Id).Data);
             return View(blog);
         }
     }

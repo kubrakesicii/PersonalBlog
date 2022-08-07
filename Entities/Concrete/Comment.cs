@@ -16,9 +16,11 @@ namespace Entities.Concrete
 
         public string UserName { get; set; }
         public DateTime Date { get; set; }
-        public string Title { get; set; }
         public string Text { get; set; }
         public int IsActive { get; set; }
+
+        public int? ParentId { get; set; }
+        public Comment Parent { get; set; }
 
     }
 }

@@ -14,7 +14,6 @@ namespace DataAccess.Configuration
         public void Configure(EntityTypeBuilder<Comment> builder)
         {
             builder.Property(x => x.UserName).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.Title).IsRequired().HasMaxLength(255);
             builder.Property(x => x.Text).IsRequired();
         }
     }
